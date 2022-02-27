@@ -1,7 +1,6 @@
 import { Player } from "./Player";
 import { positions } from "../enums/position_enum"; 
 import { GoalieStats } from "../statistics_int";
-import { penalties } from "../enums/penalty_enum";
 
 export class Goalie extends Player {
     constructor(
@@ -12,21 +11,9 @@ export class Goalie extends Player {
         public team: string,
         public stats: GoalieStats
     ){
-        super(firstname, lastname, position, rating, team);
+        super(firstname, lastname, position, rating, team, stats);
     }
 
-    public score_goal = (): void => {
-        this.stats.goals++
-    }
-    public tally_assist = (): void => {
-        this.stats.assists++
-    }
-    public play_game = (): void => {
-        this.stats.games_played++
-    }
-    public take_penalty = (minutes: penalties): void => {
-        this.stats.penalty_minutes += minutes
-    }
     public make_save = (qty: number = 1): void => {
         this.stats.saves += qty;
         this.stats.shots_faced += qty;
