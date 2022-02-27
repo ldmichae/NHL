@@ -1,7 +1,7 @@
 import { penalties } from "./Player/enums/penalty_enum";
 import { frederik_anderson, sebastian_aho } from "./Player/player_list";
 
-
+//testing functionality
 sebastian_aho.score_goal(10);
 sebastian_aho.take_penalty(penalties.doubleminor)
 sebastian_aho.tally_assist(3);
