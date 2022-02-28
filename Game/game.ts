@@ -12,4 +12,9 @@ export class NHL_GAME {
         public home_stats: TeamStats,
         public away_stats: TeamStats
     ){}
+
+    start_game = () => {
+        this.home_team.play_game();
+        this.away_team.play_game();
+    }
 }

@@ -1,14 +1,21 @@
-import { penalties } from "./Player/enums/penalty_enum";
-import { frederik_anderson, sebastian_aho } from "./Player/player_list";
+import { NHL_GAME } from "./Game/game";
+import { game_result } from "./Game/result";
+import { TeamStats } from "./Game/team_stats";
+import { Cities } from "./Geography/cities";
+import { teuvo_teravainen } from "./Player/player_list";
+import { anaheim_ducks } from "./Team/teams/anaheim";
+import { phoenix_coyotes } from "./Team/teams/phoenix";
 
-//testing functionality
-sebastian_aho.score_goal(10);
-sebastian_aho.take_penalty(penalties.doubleminor)
-sebastian_aho.tally_assist(3);
-console.log(sebastian_aho.stats)
+const game_instance = new NHL_GAME(
+    phoenix_coyotes,
+    anaheim_ducks,
+    new Date(Date.now()),
+    Cities.phoenix,
+    new game_result(phoenix_coyotes, 2, 1),
+    new TeamStats,
+    new TeamStats
+)
 
-frederik_anderson.make_save(5);
-frederik_anderson.allow_goal(3);
-frederik_anderson.make_save();
-console.log("save %:", frederik_anderson.stats.save_percentage);
+game_instance.start_game();
 
+console.log(teuvo_teravainen.stats)

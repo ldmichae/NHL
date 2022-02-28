@@ -1,6 +1,7 @@
 import { Player } from "./Player";
 import { positions } from "../enums/position_enum"; 
 import { GoalieStats } from "../statistics_int";
+import { TeamNames } from "../../Team/team_enum";
 
 export class Goalie extends Player {
     constructor(
@@ -8,7 +9,7 @@ export class Goalie extends Player {
         public lastname: string,
         public position: positions,
         public rating: number,
-        public team: string,
+        public team: TeamNames,
         public stats: GoalieStats
     ){
         super(firstname, lastname, position, rating, team, stats);

@@ -1,6 +1,5 @@
 import { Cities } from "../Geography/cities";
 import { Goalie } from "../Player/player_info/Goalie";
-import { Player } from "../Player/player_info/Player";
 import { Skater } from "../Player/player_info/Skater";
 import { TeamAcronyms, TeamNames } from "./team_enum";
 import { TeamInfoTemplate } from "./team_info_int";
@@ -11,7 +10,11 @@ export class NHL_TEAM implements TeamInfoTemplate {
         public team_name: TeamNames,
         public team_acro: TeamAcronyms, 
         public location: Cities, 
-        public roster: (Skater|Goalie)[],
+        private roster: (Skater|Goalie)[],
         public record: TeamRecord
         ){}
+
+    play_game = () => {
+        this.roster.forEach(player => player.play_game())
+    }
 }

@@ -1,3 +1,4 @@
+import { TeamNames } from "../../Team/team_enum";
 import { penalties } from "../enums/penalty_enum";
 import { positions } from "../enums/position_enum";
 import { GoalieStats, PlayerStats } from "../statistics_int";
@@ -8,7 +9,7 @@ export abstract class Player {
         public lastname: string,
         public position: positions,
         public rating: number,
-        public team: string,
+        public team: TeamNames,
         public stats: (PlayerStats|GoalieStats)
     ){}  
     public score_goal = (qty: number = 1): void => {
