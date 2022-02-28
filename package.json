@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "build":"tsc --target 'es5' --outDir 'build' index.ts",
+    "build":"tsc --target 'es5' --outDir 'build' src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build/index.js"
   },
