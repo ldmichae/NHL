@@ -2,7 +2,6 @@ import { NHL_GAME } from "./Game/game";
 import { game_result, game_type } from "./Game/result";
 import { TeamStats } from "./Game/team_stats";
 import { Cities } from "./Geography/cities";
-import { teuvo_teravainen } from "./Player/player_list";
 import { anaheim_ducks } from "./Team/teams/anaheim";
 import { phoenix_coyotes } from "./Team/teams/phoenix";
 
