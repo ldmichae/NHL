@@ -17,4 +17,10 @@ export class NHL_TEAM implements TeamInfoTemplate {
     play_game = () => {
         this.roster.forEach(player => player.play_game())
     }
+
+    record_win = () => { this.record.wins++ }
+
+    record_loss = () => { this.record.losses++ }
+
+    record_ot_loss = () => { this.record.ot_losses++ }
 }
